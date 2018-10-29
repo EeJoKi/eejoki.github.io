@@ -1,0 +1,22 @@
+body {
+*/If the image is not found the color will be used.*/
+background:#4000ff url(images/bg.jpeg) repeat-x;
+  
+  
+}
+
+#wrap{
+width:700px;
+margin: 0px 15px auto;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #4000ff;
+}
+
+/* Header */
+#header {
+  height: 242px;
+  /* margin: l, r, t, b */
+  margin: 0px 15px auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #4000ff;
+}
