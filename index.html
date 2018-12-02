@@ -1,27 +1,250 @@
 <!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
-
-  
 <head>
-<link href="..CSS/style.css" rel="stylesheet" type="text/css">
-  <div id = "header">
-    <img src="https://pbs.twimg.com/profile_images/1055555069620436992/THo-zLtt_400x400.jpg" width = "100" height = "100"> 
-    <span style="vertical-align: middle;">eejoki's Box</span>
-  
-  </div>
-</head>
-  
-<body>
-  <div id = "body">
-    <p>Welcome!</p>
-  
-    <div>
-    <p style="float: left;"><img src="http://placekitten.com/g/200/200" height="200px" width="200px" border="1px"></p>
-    <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
-    </div>
+    <title>eejoki's Box</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--Forms-->
+    <script>
+function validateForm()
+{
+if (document.forms["myForm"]["name"].value==null || document.forms["myForm"]["name"].value=="")
+{
+alert("Name must be filled out");
+return false;
+}
+if (document.forms["myForm"]["phone"].value==null || document.forms["myForm"]["phone"].value=="")
+{
+alert("Phone must be filled out");
+return false;
+}
+if (document.forms["myForm"]["email"].value==null || document.forms["myForm"]["email"].value=="")
+{
+alert("Email must be filled out");
+return false;
+}
+return true;
+}
+    </script>
+    <!--GeoLocation-->
+    <script>
+		var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    alert("Latitude:" + position.coords.latitude +
+    ", Longitude:" + position.coords.longitude);
+}
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+    </script>
 
-    <a href = "https://www.artstation.com/eejoki"> My Artstation </a> <br>
-    <a href = "https://twitter.com/eejoki_art"> My Art Twitter </a>
-  </div>
+    <!--Drag and drop-->
+    <script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+    </script>
+
+    <meta name="google-site-verification" content="fWaUXlUKqx5_Icv84x8WSUmhn-wjR-2FeXe7NoZ0740" />
+</head>
+<body>
+    <div id="wrap">
+        <div id="topbar">
+            <div id="menus">
+                <ul id="topmenu">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#music">Music</a>
+                    </li>
+                    <li>
+                        <a href="#table">Table</a></span>
+                    </li>
+                    <li>
+                        <a href="#contactus">Forms</a>
+                    </li>
+                    <li>
+                        <a href="#videos">Videos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="header">
+            <img src="images/logo.png" alt="Helmi Kinnunen" height="242px" class="center">
+        </div>
+
+        <div id="content">
+            <div id="mainpage">
+                <h1> Hihii! It's a me eejoki! </h1>
+                <h2> Geo Location</h2>
+                <p>Click the button below to give your location to us! >:3c</p>
+
+                <button onclick="getLocation()">Get your location numberings.</button>
+                <h2> Lists </h2>
+                These are lists.
+                <ul>
+                    <li>This is an <b>unordered list</b></li>
+                    <li>It doesn't have numbers</li>
+                    <li>And that's cool </li>
+                </ul>
+
+                <ol>
+                    <li>This is an <b>ordered list</b></li>
+                    <li>It has numbers</li>
+                    <li>And that's cool</li>
+                </ol>
+                <h2 id="music"> Prepare your ears for an epic battle. © eejoki 2017 with LMMS. </h2>
+                <audio controls>
+                    <source src="audio/BossBattle.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <h2 id="table">Table</h2>
+
+                <table>
+                    <tr>
+                        <th colspan="2"> Name </th>
+
+                        <th> Age </th>
+                    </tr>            
+                    <tr>
+                        <td> Eero </td>
+                        <td> Kinnunen </td>
+                        <td> 24 </td>
+                    </tr>
+                </table>
+
+                <h2 id="contactus"> Contact Us </h2>
+                <form>
+                    First Name: <input type="text" name="fname"> <br>
+                    Last Name: <input type="text" name="lname"><br>
+                    Gender: <br>
+                    <input type="radio" name="gender" value="male" checked> Male <br>
+                    <input type="radio" name="gender" value="female"> Female <br>
+                    <input type="radio" name="gender" value="other"> Other <br>
+                    E-mail:<input type="email" name="email"> <br>
+
+                    Salutation: <select name=“salutation”>
+                        <option>Dr</option>
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                        <option>Miss</option>
+                        <option>Ms</option>
+                    </select>
+                    <br /><br />
+                    Favorite Pokémon Type: <select name=“color”>
+                        <option>Bug</option>
+                        <option>Dark</option>
+                        <option>Dragon</option>
+                        <option>Electric</option>
+                        <option>Fairy</option>
+                        <option>Fairy</option>
+                        <option>Figthting</option>
+                        <option>Fire</option>
+                        <option>Flying</option>
+                        <option>Ghost</option>
+                        <option>Grass</option>
+                        <option>Ground</option>
+                        <option>Ice</option>
+                        <option>Normal</option>
+                        <option>Poison</option>
+                        <option>Physic</option>
+                        <option>Rock</option>
+                        <option>Steel</option>
+                        <option>Water</option>
+                        <input type="submit" value="Submit">
+                </form>
+                <h2>Form Validation Example</h2>
+
+
+                <form name="myForm" onsubmit="return validateForm()">
+                    Name: <input type="text" name="name" /><br />
+                    Phone: <input type="text" name="phone" /><br />
+                    E-mail: <input type="text" name="email" /><br />
+                    <input type="submit" value="Submit" />
+                </form>
+
+                <h2>How is your pain? (on scale 1-10)</h2>
+                    <dd> 1 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/logo.png" draggable="true" ondragstart="drag(event)" id="drag1" width="50" height="50"> 
+                </div>
+                    <dd> 2 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 3 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 4 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 5 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 6</dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 7 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 8 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 9 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                    <dd> 10 </dd>
+                <div id="DD" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                
+                    
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+                    <h2 id="videos">Me driving a car IRL.</h2>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/87S6jGtXEA8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+                    
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+            eejoki &copy;
+                <script type="text/javascript">var ct=new Date(); document.write(ct.getFullYear());</script>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
