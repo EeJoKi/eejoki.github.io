@@ -1,5 +1,5 @@
 body{
-	background-image: linear-gradient(#55ACEE 10%, #110934);
+	background-image: linear-gradient(#55ACEE 20%, #110934);
 	}
 #wrap{
 	width:699px;
@@ -149,6 +149,8 @@ border: 1px;
     float: left;
     width: 25px;
     height: 50px;
+    z-index: -1;
+    
     /*margin: 0px;*/
     padding: 10px;
 	border: 1px solid black;
@@ -163,7 +165,7 @@ border: 1px;
     }
     100%   
     {
-        bottom: 2300px;
+        bottom: 2400px;
         
         transform: scale(200.0);
     }
@@ -192,6 +194,8 @@ border: 1px;
     left: 25%;
     width: 1px;
     height: 1px;
+    z-index: -1;
+    
     border-radius: 50%;
     position : relative;
     animation: bubble-rise 12s infinite;
