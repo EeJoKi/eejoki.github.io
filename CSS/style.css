@@ -5,7 +5,7 @@ body{
 	width:699px;
 	margin:0px auto 30px auto;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:12px;
+	font-size:14px;
 	color:#D4EDF7;
 }
 
@@ -39,6 +39,7 @@ body{
 }
 #topmenu a:hover{
 	color:#ffffff;
+    font-family: s;
 	background-color: #4424D6;
 }
 #topmenu .active a, #topmenu .active a:visited, #topmenu .active a:active{
@@ -71,7 +72,7 @@ h1, h2, h3, h4, h5 {
 	color:#2c2c58;
 	font-weight:bold;
 	font-family: Tahoma, Geneva, sans-serif;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.75px;
     -webkit-text-stroke-color: #0d9cff;
 }
 #mainpage h1 {
@@ -79,15 +80,15 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 #mainpage h2 {
-	font-size:20px;
+	font-size: 25px;
 	padding-top: 20px;
     padding-bottom: 5px;
-    {
+    
 	border-bottom: 5px solid #0d9cff;
-    }
-    {
-    border-bottom: 5px solid #2c2c58;
-    }
+    
+    
+    
+    
 }
 #mainpage h3 {
 	font-size:20px;}
@@ -177,6 +178,8 @@ border: 1px;
     width: 1px;
     height: 1px;
     border-radius: 50%;
+    z-index: -1;
+    
     position : relative;
     animation: bubble-rise 16s infinite;
     
@@ -202,6 +205,8 @@ border: 1px;
     left: 50%;
     width: 1px;
     height: 1px;
+    z-index: -1;
+    
     border-radius: 50%;
     position : relative;
     animation: bubble-rise 20s infinite;
@@ -215,6 +220,7 @@ border: 1px;
     left: 75%;
     width: 1px;
     height: 1px;
+    z-index: -1;
     border-radius: 50%;
     position : relative;
     animation: bubble-rise 14s infinite;
@@ -228,6 +234,7 @@ border: 1px;
     left: 90%;
     width: 1px;
     height: 1px;
+    z-index: -1;
     border-radius: 50%;
     position : relative;
     animation: bubble-rise 18s infinite;
