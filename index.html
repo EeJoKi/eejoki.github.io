@@ -5,42 +5,10 @@
 
     
 <head>
-    <title>eejoki's Box</title>
+    <title>eejoki's site</title>
     <link href="CSS/style.css" rel="stylesheet" type="text/css">
     <!--Forms-->
     <script>
-function validateForm()
-{
-if (document.forms["myForm"]["name"].value==null || document.forms["myForm"]["name"].value=="")
-{
-alert("Name must be filled out");
-return false;
-}
-if (document.forms["myForm"]["phone"].value==null || document.forms["myForm"]["phone"].value=="")
-{
-alert("Phone must be filled out");
-return false;
-}
-if (document.forms["myForm"]["email"].value==null || document.forms["myForm"]["email"].value=="")
-{
-alert("Email must be filled out");
-return false;
-}
-return true;
-}
-    
-		var x = document.getElementById("demo");
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-function showPosition(position) {
-    alert("Latitude:" + position.coords.latitude +
-    ", Longitude:" + position.coords.longitude);
-}
 
     </script>
 
@@ -70,71 +38,63 @@ function showPosition(position) {
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#music">Music</a>
+                        <a href="#2Dart">2D Art</a>
                     </li>
                     <li>
-                        <a href="#table">Table</a></span>
+                        <a href="#table">3D Art</a></span>
                     </li>
                     <li>
-                        <a href="#contactus">Forms</a>
+                        <a href="#contactus">StriperTool</a>
                     </li>
                     <li>
-                        <a href="#videos">Videos</a>
+                        <a href="#videos">---</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div id="header">
-            <img src="images/logo.png" alt="eejoki_logo" height="242px" class="center">
+            <img src="images/eejoki_logo.png" alt="eejoki_logo" height="242px" class="center">
         </div>
 
         <div id="content">
             <div id="mainpage">
                 <h1> eejoki - Game Artist </h1>
-		    
-                <h2 id="music"> Prepare your ears for an epic battle. lol. © eejoki 2017 with LMMS. </h2>
-                <audio controls controlsList="nodownload">
-                    <source src="audio/BossBattle.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                
-                <h2 id="table">Table</h2>
-
-                <table>
-                    <tr>
-                        <th colspan="2"> Name </th>
-
-                        <th> Age </th>
-                    </tr>            
-                    <tr>
-                        <td> Eero </td>
-                        <td> Kinnunen </td>
-                        <td> 2X </td>
-                    </tr>
-                </table>
-
               
             </div>
                     
             </div>
         </div>
     
-    
-    
-    
-    
         <div id="footer">
             <p>
             eejoki &copy;
                 <script type="text/javascript">var ct=new Date(); document.write(ct.getFullYear());</script>
             </p>
+            
+            <a  href="https://twitter.com/eejoki_art">     
+    <img alt = "Twitter" src="https://www.danoneinstitute.org/wp-content/uploads/2020/06/logo-rond-twitter-300x300.png" width="33" height="33">
+    </a>
+    
+<a href="https://www.instagram.com/eejoki_art/">
+     <img alt = "Instagram" src="https://www.nicepng.com/png/full/991-9917902_call-call-call-blue-instagram-logo-transparent.png" width="33" height="33"
+         >
+    </a>
+
+<a href="https://www.artstation.com/eejoki">
+     <img alt = "Artstation" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Artstation_logo_logos-512.png" width="33" height="33"
+         >
+    </a>
+            
         </div>
     </div>
+
     <span class = "bubble01" left calc(body.width/5) ></span>
     <span class = "bubble02" ></span>
     <span class = "bubble03"></span>
     <span class = "bubble04"></span>
     <span class = "bubble05"></span>
+    <span class = "bubble06"></span>
+    
 </body>
+
 </html>
