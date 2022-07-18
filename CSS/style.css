@@ -1,6 +1,12 @@
 body{
 	background-image: linear-gradient(#55ACEE 20%, #110934);
 	}
+
+html,
+body {
+    height: 100%;
+}
+
 #wrap{
 	width:699px;
 	margin:0px auto 30px auto;
@@ -9,6 +15,8 @@ body{
 	color:#D4EDF7;
 }
 
+.wrap {min-height: 100%; background: red;}
+
 #header{
 	height:242px;
 	clear: both;
@@ -16,10 +24,10 @@ body{
 #topmenu {
 	display:block;
 	list-style:none;
-	padding:0 0px 0px 278px;
+	padding:0 0px 0px 10%;
 	float: right;
-	width: 415px;
-	background-color: #11ebff;
+	width: 1000px;
+	background-color: #384fa0;
 	position: fixed;
 }
 #topmenu li {
@@ -29,7 +37,7 @@ body{
 	display:block;
 	float:left;
 	height:28px;
-	margin:0px 0px 0px0px;
+	margin:0px 0px 0px 20px;
 	text-decoration:none;
 	padding:9px 15px 0px 15px;
 	text-align:center;
@@ -69,12 +77,26 @@ body{
 	font-style:italic;}
 h1, h2, h3, h4, h5 {
    
-	color:#2c2c58;
+	color:#0d9cff;
 	font-weight:bold;
 	font-family: Tahoma, Geneva, sans-serif;
-    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-width: 0.0px;
     -webkit-text-stroke-color: #0d9cff;
 }
+
+somelink
+{
+    display:inline-block;
+    height:1000px;
+}
+somelink img
+{
+    max-height: 500px;
+        width:300px; 
+    height:300px;
+}
+
+
 #mainpage h1 {
 	font-size:24px;
     text-align: center;
@@ -97,18 +119,6 @@ h1, h2, h3, h4, h5 {
 #mainpage h5 {
 	font-size:16px;}
 
-#footer {
-	margin:0 auto;
-	width:685px;
-	height:50px;
-	padding:5px;
-	color:#11ebff;
-	text-align: center;
-	background:#2c2c58;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 16px;
-	clear: both;
-}
 
 #topbar{
 	height:78px;
@@ -159,15 +169,15 @@ border: 1px;
 @keyframes bubble-rise {
     0%     
     {
-        bottom: 0;
+        top: 100%;
        
         transform: scale(1.0);
     }
     100%   
     {
-        bottom: 100%;
+        top: -100%;
         
-        transform: scale(200.0);
+        transform: scale(150.0);
     }
 }
 
@@ -176,7 +186,7 @@ border: 1px;
 {
     display: block;
     background: #55ACEE;
-    left: 10%;
+    left: 5%;
     width: 1px;
     height: 1px;
     border-radius: 50%;
@@ -191,7 +201,7 @@ border: 1px;
 {
     display: block;
     background: #55ACEE;
-    left: 25%;
+    left: 15%;
     width: 1px;
     height: 1px;
     z-index: -1;
@@ -206,7 +216,7 @@ border: 1px;
 {
     display: block;
     background: #55ACEE;
-    left: 50%;
+    left: 25%;
     width: 1px;
     height: 1px;
     z-index: -1;
@@ -235,7 +245,7 @@ border: 1px;
 {
     display: block;
     background: #55ACEE;
-    left: 90%;
+    left: 84.5%;
     width: 1px;
     height: 1px;
     z-index: -1;
@@ -245,3 +255,30 @@ border: 1px;
     
 }
 
+.bubble06
+{
+    display: block;
+    background: #55ACEE;
+    left: 95%;
+    width: 1px;
+    height: 1px;
+    z-index: -1;
+    border-radius: 50%;
+    position : relative;
+    animation: bubble-rise 18s infinite;
+    
+}
+
+#footer {
+	margin:0 auto;
+	width:685px;
+	height:66px;
+	padding:5px;
+	color:#11ebff;
+	text-align: center;
+    text-align-last: center; 
+	background:#0d92ff;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	clear: both;
+}
