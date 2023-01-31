@@ -1,18 +1,39 @@
-body{
-	background-image: linear-gradient(#55ACEE 20%, #110934);
+body {
+	background: linear-gradient(-45deg, #7fcdff, #1da2d8, #76b6c4);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
 	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 html,
 body {
     height: 100%;
 }
 
+#topbar{
+    background-color: black;
+	height:40px;
+}
+
 #wrap{
-	width:1000px;
-	margin:0px auto 30px auto;
+	width:50%;
+	margin:0px auto 0px auto;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:14px;
 	color:#D4EDF7;
+    border: 10px solid #384fa0;
 }
 
 .wrap {min-height: 100%; background: red;}
@@ -20,13 +41,14 @@ body {
 #header{
 	height:242px;
 	clear: both;
+    margin:5% 0px 5% 0%;
 }
 #topmenu {
 	display:block;
 	list-style:none;
-	padding:0 0px 0px 20%;
+    margin:0px 0px 0px 0%;
+	padding:0 0px 0px 12%;
 	float: center;
-	width: 100%;
 	background-color: #384fa0;
 	position: fixed;
 }
@@ -37,7 +59,7 @@ body {
 	display:block;
 	float:left;
 	height:28px;
-	margin:0px 0px 0px 20px;
+	margin:0px 0px 0px 50px;
 	text-decoration:none;
 	padding:9px 15px 0px 15px;
 	text-align:center;
@@ -48,15 +70,15 @@ body {
 #topmenu a:hover{
 	color:#ffffff;
     font-family: s;
-	background-color: #4424D6;
+	border: 1px solid #7fcdff;
 }
 #topmenu .active a, #topmenu .active a:visited, #topmenu .active a:active{
-	color:#FFFFFF;
-	background-color: #11ebff;
+	color:#384fa0;
+	background-color: #7fcdff;
 }
 
 #content {
-	background-color: #FFFFFF;
+	background:linear-gradient(to right, transparent, #7fcdff, transparent);
 }
 #mainpage {
 	width:700px;
@@ -74,7 +96,8 @@ body {
 	display:block; 
 	margin:5px;
 	font:Tahoma, Geneva, sans-serif; 
-	font-style:italic;}
+	font-style:italic;
+}
 h1, h2, h3, h4, h5 {
    
 	color:#0d9cff;
@@ -84,16 +107,24 @@ h1, h2, h3, h4, h5 {
     -webkit-text-stroke-color: #0d9cff;
 }
 
-somelink
+div.somelink
 {
     display:inline-block;
-    height:1000px;
+	
+	width: calc(100% * (1 / 15));
+    height: calc(100% * (1 / 2));
 }
-somelink img
+
+div.somelink:hover
 {
-    max-height: 500px;
-        width:300px; 
-    height:300px;
+	width: calc(100% * (1.5 / 15));
+    height: calc(100% * (1.5 / 2));
+}
+
+div.somelink img
+{
+  	width:100%; 
+    height:100%;
 }
 
 
@@ -116,9 +147,7 @@ somelink img
 #mainpage h5 {
 	font-size:16px;}
 
-#topbar{
-	height:78px;
-}
+
 table {
 border-spacing: 5px;
 }
@@ -163,14 +192,16 @@ border: 1px;
 }
 
 div.gallery {
+    background-color: darkslateblue;
   margin: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #110934;
   float: left;
   width: 180px;
 }
 
 div.gallery:hover {
   border: 1px solid #777;
+    width: 200px;
 }
 
 div.gallery img {
@@ -179,6 +210,7 @@ div.gallery img {
 }
 
 div.desc {
+
   padding: 15px;
   text-align: center;
 }
@@ -188,13 +220,17 @@ div.desc {
     {
         top: 100%;
        
-        transform: scale(1.0);
+        transform: scale(0.1);
+        
+        border: 1px solid #1da2d8;
     }
     100%   
     {
-        top: -100%;
+        top: 0%;
         
-        transform: scale(150.0);
+        transform: scale(1.0);
+        
+        border: 5px solid #7fcdff;
     }
 }
 
@@ -202,16 +238,15 @@ div.desc {
 .bubble01
 {
     display: block;
-    background: #55ACEE;
+    background: #1da2d8;
     left: 5%;
-    width: 1px;
-    height: 1px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     z-index: -1;
     
     position : relative;
     animation: bubble-rise 16s infinite;
-    
 }
 
 .bubble02
@@ -219,8 +254,8 @@ div.desc {
     display: block;
     background: #55ACEE;
     left: 15%;
-    width: 1px;
-    height: 1px;
+    width: 60px;
+    height: 60px;
     z-index: -1;
     
     border-radius: 50%;
@@ -234,8 +269,8 @@ div.desc {
     display: block;
     background: #55ACEE;
     left: 25%;
-    width: 1px;
-    height: 1px;
+   width: 60px;
+    height: 60px;
     z-index: -1;
     
     border-radius: 50%;
@@ -249,8 +284,8 @@ div.desc {
     display: block;
     background: #55ACEE;
     left: 75%;
-    width: 1px;
-    height: 1px;
+    width: 60px;
+    height: 60px;
     z-index: -1;
     border-radius: 50%;
     position : relative;
@@ -263,12 +298,12 @@ div.desc {
     display: block;
     background: #55ACEE;
     left: 84.5%;
-    width: 1px;
-    height: 1px;
+    width: 60px;
+    height: 60px;
     z-index: -1;
     border-radius: 50%;
     position : relative;
-    animation: bubble-rise 18s infinite;
+    animation: bubble-rise 18.25s infinite;
     
 }
 
@@ -277,19 +312,20 @@ div.desc {
     display: block;
     background: #55ACEE;
     left: 95%;
-    width: 1px;
-    height: 1px;
+   width: 60px;
+    height: 60px;
     z-index: -1;
     border-radius: 50%;
     position : relative;
-    animation: bubble-rise 18s infinite;
+    animation: bubble-rise 16.33s infinite;
     
 }
 
-#footer {
+#footer
+{
 	margin:0 auto;
-	width:685px;
-	height:66px;
+	width:50%;
+	height:10%;
 	padding:5px;
 	color:#11ebff;
 	text-align: center;
@@ -298,4 +334,5 @@ div.desc {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 16px;
 	clear: both;
+	
 }

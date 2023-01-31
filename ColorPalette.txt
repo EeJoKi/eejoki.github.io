@@ -1,0 +1,10 @@
+Colors from lightest to darkest.
+
+#7fcdff
+
+#1da2d8
+
+#76b6c4
+
+Navy Blue
+#384fa0
