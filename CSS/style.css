@@ -47,7 +47,7 @@ body {
 	display:block;
 	list-style:none;
     margin:0px 0px 0px 0%;
-	padding:0 0px 0px 12%;
+	padding:0 0px 0px 0%;
 	float: center;
 	background-color: #384fa0;
 	position: fixed;
@@ -61,7 +61,7 @@ body {
 	height:28px;
 	margin:0px 0px 0px 50px;
 	text-decoration:none;
-	padding:9px 15px 0px 15px;
+	padding:9px 0% 0px 20px;
 	text-align:center;
 }
 #topmenu a, #topmenu a:visited, #topmenu a:active {
@@ -81,9 +81,9 @@ body {
 	background:linear-gradient(to right, transparent, #7fcdff, transparent);
 }
 #mainpage {
-	width:700px;
+	width:100%;
 	float:center;
-	padding:5px 15% 5px 15%;
+	padding:5px 0% 5px 0%;
 	height:auto
 }
 #mainpage p {
@@ -107,6 +107,26 @@ h1, h2, h3, h4, h5 {
     -webkit-text-stroke-color: #0d9cff;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #7fcdff;
+}
+
 div.somelink
 {
     display:inline-block;
@@ -127,10 +147,17 @@ div.somelink img
     height:100%;
 }
 
+div.tool img
+{
+	width:100%;
+	height: auto;
+}
+
 div.sketchfab-embed-wrapper iframe
 {
-	height: calc(100% * (1 / 2));
+	
 	width: 100%;
+	height: calc(attr(width) / 2);
 	
 }
 
@@ -331,7 +358,7 @@ div.desc {
 {
 	margin:0 auto;
 	width:50%;
-	height:10%;
+	height:8%;
 	padding:5px;
 	color:#11ebff;
 	text-align: center;

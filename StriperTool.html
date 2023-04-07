@@ -32,6 +32,30 @@
         
         <div id="content">
             <div id="mainpage">
+			
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				
+			<script>
+				// Get the button
+				let mybutton = document.getElementById("myBtn");
+
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				  } else {
+					mybutton.style.display = "none";
+				  }
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+				</script>
             </div>           
         </div>
         
@@ -49,8 +73,10 @@
             <h1>Values</h1>
             <p>(subtab)</p>
             
-            <img src="images/Tool01.png" alt="eejoki_logo" height="242px" class="">   
-            
+			<div class= "tool">
+            	<img src="images/Tool01.png" alt="eejoki_logo" height="242px" class="">   
+			</div>
+				
             <h3>¤ Texture Type Area</h3>
 
                 <p>- Buttons for all the PBR types.</p>
@@ -115,8 +141,10 @@
             <h1>Presets</h1>
             <p>(subtab)</p>
             
-            <img src="images/Tool03.png" alt="eejoki_logo" height="500px" class="left">
-    
+			<div class= "tool">
+            	<img src="images/Tool03.png" alt="eejoki_logo" height="500px" class="center">
+			</div>
+			
             <h2>¤ Top button row:</h2>
             
             <p>From Pool: Adds the selceted tag from pool to the selected presets.</p>
@@ -135,7 +163,8 @@
             <h1>Settings</h1>
             <p>(subtab)</p>
             
-            <img src="images/Tool02.png" alt="eejoki_logo" height="500px" class="left">          
+			<div class= "tool">
+				<img src="images/Tool02.png" alt="eejoki_logo" height="500px" class="left">          </div>
             
             <h3>¤ Comes with 3 modes:</h3>
             
@@ -215,11 +244,15 @@
 			<h2>You can find my thesis about the tool here:</h2>
 			<p>(Available in Finnish only.)</p>
 			
-			<a target="_blank" href="https://urn.fi/URN:NBN:fi:amk-2022121429633">
+			<div class= "tool">
+			
+				<a target="_blank" href="https://urn.fi/URN:NBN:fi:amk-2022121429633">
 
-				<img src="images/theseus.png" alt="eejoki_logo" height="300px" class="left">
+					<img src="images/theseus.png" alt="eejoki_logo" height="300px" class="left">
 
-			</a>
+				</a>
+			
+			</div>
 		
 		</div>
 			
@@ -248,12 +281,14 @@
         </div>
     </div>
 
+	<!--
     <span class = "bubble01" left calc(body.width/5) ></span>
     <span class = "bubble02" ></span>
     <span class = "bubble03"></span>
     <span class = "bubble04"></span>
     <span class = "bubble05"></span>
     <span class = "bubble06"></span>
+	-->
     
 </body>
 
