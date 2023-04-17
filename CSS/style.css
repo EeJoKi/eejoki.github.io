@@ -39,7 +39,7 @@ body {
 .wrap {min-height: 100%; background: red;}
 
 #header{
-	height:242px;
+	height:240px;
 	clear: both;
     margin:5% 0px 5% 0%;
 }
@@ -58,10 +58,10 @@ body {
 #topmenu a {
 	display:block;
 	float:left;
-	height:28px;
-	margin:0px 0px 0px 50px;
+	height:33px;
+	margin:0px 0px 0px 66px;
 	text-decoration:none;
-	padding:9px 0% 0px 20px;
+	padding:2% 0% -3px 0PX;
 	text-align:center;
 }
 #topmenu a, #topmenu a:visited, #topmenu a:active {
