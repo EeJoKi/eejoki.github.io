@@ -23,7 +23,7 @@ body {
 }
 
 #topbar{
-    background-color: black;
+    background-color: #384fa0;
 	height:40px;
 }
 
@@ -75,6 +75,7 @@ body {
 #topmenu .active a, #topmenu .active a:visited, #topmenu .active a:active{
 	color:#384fa0;
 	background-color: #7fcdff;
+    font-weight: 900;
 }
 
 #content {
@@ -107,7 +108,7 @@ h1, h2, h3, h4, h5 {
     -webkit-text-stroke-color: #0d9cff;
 }
 
-#myBtn {
+#myButton {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -116,14 +117,14 @@ h1, h2, h3, h4, h5 {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: blue;
+  background-color: 384fa0;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
-#myBtn:hover {
+#myButton:hover {
   background-color: #7fcdff;
 }
 

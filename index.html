@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
+    <head>
+        <title>eejoki's site</title>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+        <!--Forms-->
+        <script></script>
 
-<head>
-    <title>eejoki's site</title>
-    <link href="CSS/style.css" rel="stylesheet" type="text/css">
-    <!--Forms-->
-    <script>
+        <!--Drag and drop-->
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
 
-    </script>
-
-    <!--Drag and drop-->
-    <script>
-		function allowDrop(ev) {
-			ev.preventDefault();
-		}
-		function drag(ev) {
-			ev.dataTransfer.setData("text", ev.target.id);
-		}
-		function drop(ev) {
-			ev.preventDefault();
-			var data = ev.dataTransfer.getData("text");
-			ev.target.appendChild(document.getElementById(data));
-		}
-    </script>
-
-    <meta name="google-site-verification" content="fWaUXlUKqx5_Icv84x8WSUmhn-wjR-2FeXe7NoZ0740" />
-</head>
-<body>
-    <div id="wrap">
-        <div id="topbar">
+        <meta
+            name="google-site-verification"
+            content="fWaUXlUKqx5_Icv84x8WSUmhn-wjR-2FeXe7NoZ0740" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="topbar">
                 <ul id="topmenu">
                     <li class="active">
                         <a href="#">Home</a>
@@ -44,52 +43,57 @@
                         <a href="StriperTool.html">StriperTool</a>
                     </li>
                 </ul>
-            
-        </div>
+            </div>
             <div id="header">
-                <img src="images/eejoki_logo.png" alt="eejoki_logo" height="242px" class="center">
+                <img
+                    src="images/eejoki_logo.png"
+                    alt="eejoki_logo"
+                    height="242px"
+                    class="center" />
             </div>
 
             <div id="content">
                 <div id="mainpage">
-                    <h1> eejoki - Game Artist </h1>
+                    <h1>eejoki - Game Artist</h1>
                 </div>
-                
-                <p></p>
-                <p></p>
-                <p></p>
 
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
-        
-    
-        <div id="footer">
-            <p>
-                eejoki &copy;
-                    <script type="text/javascript">var ct=new Date(); document.write(ct.getFullYear());</script>
-            </p>
-            
-            <div class= "somelink"> 
-                <a  href="https://twitter.com/eejoki_art">     
-                <img alt = "Twitter" src="images/Logo_Twitter.png">
-                </a>
-            </div>
-            
-            <div class= "somelink">
-                <a href="https://www.instagram.com/eejoki_art/">
-                    <img alt = "Instagram" src="images/Logo_Instagram.png">
-                </a>
-            </div>
-            
-            <div class= "somelink">
-               	<a href="https://www.artstation.com/eejoki">
-                     <img alt = "Artstation" src="images/Logo_ArtStation.png">
-                </a>           
+
+            <div id="footer">
+                <p>
+                    eejoki &copy;
+                    <script type="text/javascript">
+                        var ct = new Date();
+                        document.write(ct.getFullYear());
+                    </script>
+                </p>
+
+                <div class="somelink">
+                    <a href="https://twitter.com/eejoki_art">
+                        <img alt="Twitter" src="images/Logo_Twitter.png" />
+                    </a>
+                </div>
+
+                <div class="somelink">
+                    <a href="https://www.instagram.com/eejoki_art/">
+                        <img alt="Instagram" src="images/Logo_Instagram.png" />
+                    </a>
+                </div>
+
+                <div class="somelink">
+                    <a href="https://www.artstation.com/eejoki">
+                        <img
+                            alt="Artstation"
+                            src="images/Logo_ArtStation.png" />
+                    </a>
+                </div>
             </div>
         </div>
-        
-        </div>
-    
-	<!--
+
+        <!--
     <span class = "bubble01"></span>
     <span class = "bubble02"></span>
     <span class = "bubble03"></span>
@@ -97,7 +101,5 @@
     <span class = "bubble05"></span>
     <span class = "bubble06"></span>
 	-->
-    
-</body>
-
+    </body>
 </html>
